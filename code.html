@@ -103,6 +103,19 @@ function getValues() {
   let startNumber = parseInt(startValue);
   let endNumber = parseInt(endValue);
 
+  if (Number.isInteger(startNumber) && Number.isInteger(endNumber)) {
+
+    let numberArray = generateNumbers(startNumber, endNumber);
+    displayNumbers(numberArray);
+
+  } else {
+    Swal.fire({
+      icon:'error',
+      title: 'Oops!',
+      text: 'Please enter a valid number for the start and end values'
+    });
+  }
+
   let numberArray = generateNumber(startNumber, endNumber);
   displayNumbers(numberArray);
 } 
@@ -161,6 +174,9 @@ function displayNumbers(numbers) {
           </p>
           <p class="my-3"> Lastly the displayNumbers function recieves every number and places them onto our table in the webpage. But first we created a line of code that told it to 
             take every that is divisble by 2 without leaving a remainder (even numbers) and make them bold on the web-page. Now every number is displayed with even numbers boldened!
+          </p>
+          <p class="my-3">Additionally, I have added a notice so that if someone were to use a browser that allowed them to put non-number characters into the number placement locations
+            (where the default 0 and 100 are loacted) then they would get an error asking them to use a valid number in the box.
           </p>
         </div>
       </div>
