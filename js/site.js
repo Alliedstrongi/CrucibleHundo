@@ -7,6 +7,19 @@ function getValues() {
   let startNumber = parseInt(startValue);
   let endNumber = parseInt(endValue);
 
+  if (Number.isInteger(startNumber) && Number.isInteger(endNumber)) {
+
+    let numberArray = generateNumbers(startNumber, endNumber);
+    displayNumbers(numberArray);
+
+  } else {
+    Swal.fire({
+      icon:'error',
+      title: 'Oops!',
+      text: 'Please enter a valid number for the start and end values'
+    });
+  }
+
   let numberArray = generateNumber(startNumber, endNumber);
   displayNumbers(numberArray);
 } 
@@ -32,7 +45,6 @@ function displayNumbers(numbers) {
 
   for (let index = 0; index < numbers.length; index++) {
     let currentNumber = numbers[index];
-
 
     if (currentNumber % 2 == 0) {
     results += `<tr><td class="evenNumber">${currentNumber}</td></tr>`;
