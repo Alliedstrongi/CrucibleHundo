@@ -37,6 +37,11 @@
 		max-width: 400px;
 	}
 
+
+	.evenNumber {
+		font-weight: bolder;
+	}
+
 	/*Sticky Footer*/
 
 	html,
