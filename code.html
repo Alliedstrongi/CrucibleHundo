@@ -145,9 +145,23 @@ function displayNumbers(numbers) {
                 </pre>
         </div>
         <div class="col-lg-4 col-12">
-          <p>The code is structured in one function</p>
-          <h5>displayMessage</h5>
-          <p>Prints our the message</p>
+          <h5>The purpose of this code is to create a functioning web-page that allows for anyone to choose a set of numbers, then to see what numbers are even or odd within it.</h5>
+          <h3><strong>How it works...</strong></h3>
+          <p>Our code is divided into 3 seperate sections. The getValues function, the generateNumber function, and the displayNumbers function (You can find the beginning of each section by the word "function"). I have ordered them by what is happening with the code
+            to make it easier to understand.</p>
+          <p class="my-3">To begin, we need to know what the function is designed for. The getValues funstion is created to gather data from our app.html page and place the information
+            into our JavaScript. Then it assigns each value from the html into the JavaScript so that we are able to recieve information from the rest of our JavaScript code. Then, 
+            we ask the code to go to the next two sections to be understood. First we ask it to be solved by our generateNumber, then we ask it to display on our web-page with displayNumbers.
+          </p>
+          <p class="my-3"> Once our values are assigned into JavaScript and we have asked it to go to generateNumber, the next function begins. This function asks our code to complete
+            certain properties. It asks for the beginning and end numbers, by default these are assigned to 0 and 100, but can be changed thanks to our HTML. At which point it gathers
+            every number in between and including our numbers by taking the starting number, holding onto that number, then adding 1 to it for the next number. It continues to add these
+            numbers by one, and holding onto each number until it reaches a number that exceeds our maximum value. At which point it stops running, and returns every gathered value 
+            that it held onto back to our getValues function. Then the getValues function asks us to take those values and send them to displayNumbers to be put onto the webpage.
+          </p>
+          <p class="my-3"> Lastly the displayNumbers function recieves every number and places them onto our table in the webpage. But first we created a line of code that told it to 
+            take every that is divisble by 2 without leaving a remainder (even numbers) and make them bold on the web-page. Now every number is displayed with even numbers boldened!
+          </p>
         </div>
       </div>
     </main>
