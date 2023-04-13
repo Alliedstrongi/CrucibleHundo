@@ -9,7 +9,7 @@ function getValues() {
 
   if (Number.isInteger(startNumber) && Number.isInteger(endNumber)) {
 
-    let numberArray = generateNumbers(startNumber, endNumber);
+    let numberArray = generateNumber(startNumber, endNumber);
     displayNumbers(numberArray);
 
   } else {
